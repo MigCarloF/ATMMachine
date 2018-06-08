@@ -57,6 +57,7 @@ public class atmMachine {
                         }
                     }
                 }
+
                 System.out.println("Dispensed:");
                 while (!denominations.empty()) {
                     System.out.print(billTypeStack.pop().getName() + ": ");
@@ -69,7 +70,7 @@ public class atmMachine {
         return null;
     }
 
-    protected int denominationCounter(Bill b, Integer amount, Stack<Bill> toDispense){
+    private int denominationCounter(Bill b, Integer amount, Stack<Bill> toDispense){
         int denomination = 0;
         while(amount >= b.getAmount()){
             toDispense.push(b);
