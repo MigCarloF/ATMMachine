@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -13,13 +15,12 @@ public class Main {
         List<Bill> list = new ArrayList<Bill>();
 
         list.add(oneThousand);
-        list.add(fiveHundred);
-        list.add(twoHundred);
-        list.add(oneHundred);
-        list.add(fifty);
         list.add(twenty);
-
-        atmMachine atm = new atmMachine(5000, 4000, list);
-        atm.transact(860);
+        list.add(fiveHundred);
+        list.add(oneHundred);
+        list.add(twoHundred);
+        list.add(fifty);
+        atmMachine atm = new atmMachine(50000, 40000, list);
+        atm.transact(15840);
     }
 }
